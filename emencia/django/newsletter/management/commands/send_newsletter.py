@@ -24,7 +24,7 @@ class Command(NoArgsCommand):
             mailer = Mailer(newsletter, verbose=verbose)
             if mailer.can_send:
                 if verbose:
-                    print u'Start emailing %s' % unicode(newsletter.title.decode('utf8'))
+                    print u'Start emailing %s' % unicode(newsletter.id)
                 mailer.run()
 
         if verbose:
